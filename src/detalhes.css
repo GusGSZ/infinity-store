@@ -1,0 +1,109 @@
+.product-details {
+    display: flex;
+    margin: 124px 100px 0px 100px;
+    margin-top: 124px;
+}
+
+.product-image {
+    width: 360px;
+    height: 500px;
+    max-height: 500px;
+    margin-right: 20px;
+    background-color: #FFF;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-title {
+    margin-top: 0;
+}
+
+.product-rating {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.star {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: gold;
+    border-radius: 50%;
+}
+
+.product-quantity input {
+    margin-bottom: 10px;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 1px solid #005B5C;
+}
+
+.bottom-items {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.buy-button {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 200px;
+    height: 52px;
+    background-color: #005B5C;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.shopping-bag {
+    color: #FFF;
+    width: 50px;
+    margin: -10px 0px 0 0;
+}
+
+.buy-button p {
+    margin-top: 10px;
+}
+
+.product-description {
+    background-color: #f5f5f5;
+    margin-top: 20px;
+    width: 85%;
+    margin: 93px 0px 93px 126px;
+    margin-left: 126px;
+    margin-top: 93px;
+    border: 1px solid black;
+}
+
+.product-description hr {
+    border: 1px solid #000;
+}
+
+.description-title {
+    margin-left: 8px;
+}
+
+.description-text {
+    padding: 8px;
+}
+
+.product-price {
+    margin-top: 210px;
+    font-size: 24px;
+    font-weight: 600;
+}

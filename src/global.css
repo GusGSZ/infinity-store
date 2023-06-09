@@ -1,0 +1,129 @@
+/* Geral */
+
+html,
+body {
+  display: flex;
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: column;
+  height: 100%;
+  background-color: #D6D5D1;
+}
+
+/* Header */
+
+header {
+  height: 80px;
+  margin-bottom: 73px;
+}
+
+.header-container {
+  align-items: center;
+  display: flex;
+  color: #F5F5F5;
+  font-size: 14px;
+  font-weight: 400;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 37px;
+  background-color: #005B5C;
+}
+
+.header-padding {
+  display: flex;
+  flex-direction: row;
+}
+
+#header-one {
+  border-radius: 10px 10px 0px 0px;
+  padding: 8px 24px;
+}
+
+#header-two {
+  height: 43px;
+  background-color: #f1ecec;
+  font-size: 12px;
+  border: 1px solid black;
+  padding: 9.5px 24px;
+}
+
+#header-nav a {
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 12px;
+  color: #D4D4D4;
+  margin-right: 10px;
+}
+
+#header-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+/* Icone */
+
+.icon-spacing {
+  width: 18px;
+  padding-left: 24px;
+}
+
+#logo {
+  width: 90px;
+  padding-left: 0px;
+}
+
+/* Search */
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.search-input {
+  position: absolute;
+  top: 28px;
+  left: 50px;
+  width: 0;
+  height: 20px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+  transition: width 0.3s, opacity 0.3s;
+  opacity: 0;
+  outline: none;
+  font-size: 14px;
+  color: #000;
+}
+
+.search-input.active {
+  width: 200px;
+  opacity: 1;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-input:focus::placeholder {
+  color: #706e6ece;
+}
+
+.search-input:focus {
+  border-bottom: 1px solid #000;
+}
+
+
+/* main */
+
+main {
+  flex: 1;
+  flex-grow: 1;
+  height: max-content;
+}

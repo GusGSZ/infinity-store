@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinity Store</title>
+  <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="header-container" id="header-one">
+      <div class="header-padding">Gustavo Gomes, 656841, Ciência da Computação</div>
+      <nav id="header-nav" class="header-padding">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-container" id="header-two">
+      <div class="header-padding">
+        <img class="icon-spacing" id="logo" src="assets/InfinityStoreLogo.svg" />
+        <div class="search-container">
+          <img class="search-icon icon-spacing" src="assets/search.svg" />
+          <input type="text" class="search-input" placeholder="Pesquisar">
+        </div>
+      </div>
+      <div class="header-padding">
+        <img class="icon-spacing" src="assets/shopping-cart.svg" />
+        <img class="icon-spacing" src="assets/user.svg" />
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <h2 style="text-align: center;">Categorias</h2>
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" checked id="allproducts">
+        <input type="radio" name="radio-btn" id="electronics">
+        <input type="radio" name="radio-btn" id="jewelery">
+        <input type="radio" name="radio-btn" id="men's clothing">
+        <input type="radio" name="radio-btn" id="women's clothing">
+
+
+        <div class="slide first">
+          <a href="category.html"><img src="assets/allproducts.svg" alt="Imagem 1" /></a>
+        </div>
+        <div class="slide">
+          <a href="category.html"><img src="assets/electronics.svg" alt="Imagem 2" /></a>
+        </div>
+        <div class="slide">
+          <a href="category.html"><img src="assets/jewelery.svg" alt="Imagem 3" /></a>
+        </div>
+        <div class="slide">
+          <a href="category.html"><img src="assets/mensclothing.svg" alt="Imagem 4" /></a>
+        </div>
+        <div class="slide">
+          <a href="category.html"><img src="assets/womensclothing.svg" alt="Imagem 5" /></a>
+        </div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+          <div class="auto-btn5"></div>
+        </div>
+      </div>
+
+      <div class="manual-navigation">
+        <label for="allproducts" class="manual-btn"></label>
+        <label for="electronics" class="manual-btn"></label>
+        <label for="jewelery" class="manual-btn"></label>
+        <label for="men's clothing" class="manual-btn"></label>
+        <label for="women's clothing" class="manual-btn"></label>
+      </div>
+    </div>
+
+    <div class="categorias-container">
+      <h2>Produtos</h2>
+      <div class="produtos-grid">
+
+      </div>
+    </div>
+
+  </main>
+  <script src="global.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
