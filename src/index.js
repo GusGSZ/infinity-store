@@ -20,14 +20,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchIcon = document.querySelector('.search-icon');
     searchIcon.addEventListener('click', toggleSearchInput);
   }
-  
+
   function handleSearchInput() {
     clearTimeout(searchTimeout);
 
     // Aguardar um pequeno intervalo para evitar chamadas excessivas à API durante a digitação
     searchTimeout = setTimeout(() => {
       const searchTerm = searchInput.value.trim();
-
+      const radios = document.querySelectorAll('input[type="radio"]')
+      radios.forEach(radio => {
+        if (radio.id === 'allproducts' && !radio.checked) radio.checked = true;
+      });
+      
       if (searchTerm !== '') {
         searchProducts(searchTerm);
       } else {
@@ -75,8 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (activeRadio.id === 'allproducts') getProducts();
     else fetch(`https://fakestoreapi.com/products/category/${activeRadio.id}`)
-    .then(res=>res.json())
-    .then(data=>renderCards(data))
+      .then(res => res.json())
+      .then(data => renderCards(data))
   }
 
   function renderCards(data) {
