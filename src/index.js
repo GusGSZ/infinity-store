@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.querySelector('.search-input');
     searchInput.classList.toggle('active');
     if (searchInput.classList.contains('active')) {
-      searchInput.style.width = '200px';
+      searchInput.style.width = window.innerWidth < 640 ? '80px' : '200px';
+      searchInput.style.fontSize = window.innerWidth < 640 ? '11px' : '14px';
       searchInput.style.opacity = '1';
       searchInput.focus();
     } else {

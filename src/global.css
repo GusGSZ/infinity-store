@@ -50,7 +50,7 @@ header {
 #header-nav a {
   text-decoration: none;
   font-weight: 200;
-  font-size: 12px;
+  font-size: 14px;
   color: #D4D4D4;
   margin-right: 10px;
 }
@@ -58,6 +58,16 @@ header {
 #header-nav ul {
   display: flex;
   list-style: none;
+}
+
+@media screen and (max-width: 630px) {
+  .header-container {
+    font-size: 10px;
+  }
+
+  #header-nav a {
+    font-size: 12px;
+  }
 }
 
 /* Icone */
@@ -70,6 +80,18 @@ header {
 #logo {
   width: 90px;
   padding-left: 0px;
+}
+
+@media screen and (max-width: 630px) {
+  .icon-spacing {
+    width: 15px;
+    padding-left: 10px;
+  }
+  
+  #logo {
+    width: 55px;
+    padding-left: 0px;
+  }
 }
 
 /* Search */
@@ -119,6 +141,33 @@ header {
   border-bottom: 1px solid #000;
 }
 
+@media screen and (max-width: 630px) {
+  .search-input.active {
+    max-width: 80px;
+  }
+
+  .search-input:focus::placeholder {
+    color: #706e6ece;
+    font-size: 11px;
+  }
+
+  .search-input {
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    width: 0;
+    height: 20px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    transition: width 0.3s, opacity 0.3s;
+    opacity: 0;
+    outline: none;
+    font-size: 14px;
+    color: #000;
+  }
+}
 
 /* main */
 
