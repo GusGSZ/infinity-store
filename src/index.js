@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       productPrice.textContent = `R$ ${product.price}`;
       productPrice.classList.add('price')
       const buyButton = document.createElement('a');
-      details.href = `detalhes.html?id=${product.id}`;
+      details.href = `src/detalhes.html?id=${product.id}`;
 
       details.appendChild(productName);
       details.appendChild(productDescription);
