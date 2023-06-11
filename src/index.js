@@ -26,13 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchTimeout = setTimeout(() => {
       const searchTerm = searchInput.value.trim();
-      const paginationContainer = document.querySelector('.pagination');
+      const paginationContainer = document.querySelector(".pagination");
 
       if (searchTerm !== "") {
         searchProducts(searchTerm);
-        paginationContainer.style.display = 'none';
+        paginationContainer.style.display = "none";
       } else {
-        paginationContainer.style.display = 'block';
+        paginationContainer.style.display = "block";
         getProducts();
       }
     }, 300);
@@ -51,9 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Produtos */
 
   function getProducts() {
-    fetch(`https://diwserver.vps.webdock.cloud/products?page=1&page_items=${itensPorPagina}`)
+    fetch(
+      `https://diwserver.vps.webdock.cloud/products?page=1&page_items=${itensPorPagina}`
+    )
       .then((res) => res.json())
       .then((data) => {
+        const paginationContainer = document.querySelector(".pagination");
+        paginationContainer.style.display = "block";
         renderCards(data.products);
       });
   }
@@ -78,10 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function getByCategory(category) {
     if (category === "allproducts") getProducts();
-    else
+    else {
       fetch(`https://diwserver.vps.webdock.cloud/products/category/${category}`)
         .then((res) => res.json())
-        .then((data) => renderCards(data.products));
+        .then((data) => {
+          renderCards(data.products);
+        });
+      const paginationContainer = document.querySelector(".pagination");
+      paginationContainer.style.display = "none";
+    }
   }
 
   function exibirCategorias() {
@@ -180,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
       link.addEventListener("click", function () {
         exibirPagina(numeroPagina);
       });
-  
+
       return link;
     }
 
