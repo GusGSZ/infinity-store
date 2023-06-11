@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function returnProductsByPage(page) {
     const resposta = await fetch(
-      `https://diwserver.vps.webdock.cloud/products?page=${page}&page_items=20`
+      `https://diwserver.vps.webdock.cloud/products?page=${page}&page_items=${itensPorPagina}`
     );
     const data = await resposta.json();
 
