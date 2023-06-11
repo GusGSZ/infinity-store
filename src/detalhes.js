@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     function getProductDetails() {
-        // Obtém os parâmetros da URL
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
-        fetch(`https://fakestoreapi.com/products/${productId}`)
+        fetch(`https://diwserver.vps.webdock.cloud/products/${productId}`)
             .then(response => response.json())
             .then(product => {
                 renderDetails(product);
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const descriptionDisplay = document.querySelector('.product-description');
         const description = document.createElement('p');
         description.classList.add('description-text');
-        description.textContent = product.description;
+        description.innerHTML = product.description;
         descriptionDisplay.appendChild(description);
     }
 
